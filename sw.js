@@ -5,7 +5,7 @@ const assets = [
     '${url}index.html',
     '${url}manifest.json',
     '${url}js/instalar.js',
-    '${url}js/app.js'
+    '${url}js/app.js',
 ];
 
 self.addEventListener('install', (e) => {
