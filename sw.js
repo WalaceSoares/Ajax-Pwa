@@ -1,10 +1,11 @@
+const url = "https://walacesoares.github.io/Ajax-Pwa"
 const CACHE_NAME = "ajax-pwa-v8";
 const assets = [
-    "/",
-    "/index.html",
-    "/manifest.json",
-    "/js/instalar.js",
-    "/js/app.js"
+    url+"/",
+    url"/index.html",
+    url+"/manifest.json",
+    url+"/js/instalar.js",
+    url+"/js/app.js"
 ];
 
 self.addEventListener('install', (e) => {
