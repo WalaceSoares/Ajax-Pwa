@@ -1,0 +1,16 @@
+{
+    "short_name": "App - AJAX",
+    "name": "Aplicativo - AJAX PWA",
+    "icons": [
+      {
+        "src": "R.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "ajax.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#43a047",
+    "background_color": "#388E3C"
+  }

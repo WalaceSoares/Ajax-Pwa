@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json" />
+    <title>Document</title>
+    
+</head>
+<body>
+    <h5>Instalar a aplicação</h5>
+    <button id="btn-instalar">Instalar</button>
+    
+
+<style>
+    body{
+        display:flex;
+        flex-direction:row;
+    }
+    img{
+        width: 33%;
+    }
+</style>
+<script>
+
+
+    async function mostrarAnimeFactsRestApi (nome){
+        const result = await fetch(`https://anime-facts-rest-api.herokuapp.com/api/v1/${nome}`)
+        const anime = await result.json();
+        console.log(anime)
+        const img = anime.img
+        const imagem = `<img src="${img}">`;
+        document.body.insertAdjacentHTML('afterbegin', imagem);
+    }
+
+    mostrarAnimeFactsRestApi("naruto")
+ 
+
+    async function mostrarChuckNorris (){
+        const result1 = await fetch(`https://api.chucknorris.io/jokes/random`)
+        const norris = await result1.json();
+        console.log(norris)
+        const valueNorris = norris.value
+        const pNorris = `<p>${valueNorris}</p>`;
+        document.body.insertAdjacentHTML('afterbegin', valueNorris);
+    }
+
+    mostrarChuckNorris()
+
+
+    async function rick(n) {
+	const resultRick = await fetch (`https://rickandmortyapi.com/api/character/${n}`);
+	const rick = await resultRick.json();
+    console.log(rick)
+    const imgRick = rick.image
+    const imagemRick = `<img src="${imgRick}">`;
+        document.body.insertAdjacentHTML('afterbegin', imagemRick);
+}
+    var aleatorio = Math.floor(Math.random() * 200);
+    rick(aleatorio)
+
+
+</script>
+<script src="js/app.js"></script>
+<script src="js/instalar.js"></script>
+</body>
+</html>
