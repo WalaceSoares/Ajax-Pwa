@@ -1,7 +1,7 @@
 const CACHE_NAME = "ajax-pwa-v8";
 const assets = [
     "/",
-    "/ajax.html",
+    "/index.html",
     "/manifest.json",
     "/js/instalar.js",
     "/js/app.js"
